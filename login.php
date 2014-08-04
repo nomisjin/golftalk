@@ -12,7 +12,7 @@ if($user_ok == true){
 // AJAX CALLS THIS LOGIN CODE TO EXECUTE
 if(isset($_POST["e"])){
 	// CONNECT TO THE DATABASE
-	include_once("php_includes/db_conx.php");
+	include_once("php_includes/db_conx_server.php");
 	// GATHER THE POSTED DATA INTO LOCAL VARIABLES AND SANITIZE
 	$e = mysqli_real_escape_string($db_conx, $_POST['e']);
 	$p = md5($_POST['p']);
