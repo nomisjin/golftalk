@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#formName{
+	height:200px;
+    width:500px;
+    border: 2px solid #CCCCCC;
+    border-top: 30px solid #CCCCCC;
+	display:none;
+}
+
+#buttonRow{
+	height:30px;;
+    width:500px;
+}
+
+#viewPriceButton{
+	font-size:12px;
+	color: white;
+	font-family: Verdana;
+	float:right;
+	background-color: #005bb4;
+}
+</style>
+</head>
+<body>
+	<div id="buttonRow">
+		<button id="viewPriceButton" onclick="buildForm()"><span id="dirArrow">&#8649;</span> View Pricing</button>
+	</div>
+	<div>
+		<form id="formName"> <div align="center">FORM element for detailed pricing and dates.</div></form>
+	</div>
+
+
+<script>
+function buildForm(){
+	var element = document.getElementById("dirArrow");
+	element.innerHTML = "&#8650;";
+	document.getElementById("formName").style.display = "block";
+}
+</script>
+
+</body>
+</html>
